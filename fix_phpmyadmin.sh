@@ -20,8 +20,7 @@ phpMyAdmin()
 		for i in "${spinner[@]}"
 		do
 			echo -ne "\033[1;34m\r[\e[1;31m*\e[1;34m] Removing phpmyadmin 5.1.1-1 directory \e[34m[\033[31m$i\033[34m]\033[0m   ";
-			rm -rf $PREFIX/share/phpmyadmin
-			sleep .3s
+			rm -rf $PREFIX/share/phpmyadmin 2> /dev/null
 		done
 			printf "\b\b\b\b\b\b\b\b";
 			printf "   \b\b\b\b\b"
@@ -30,10 +29,10 @@ phpMyAdmin()
 			echo ""
 			echo -e "\e[1;34m[\e[\e[1;92m~\e[1;34m]\e[1;32m Downloading phpMyAdmin-5.1.2-all-languages\e[0m"
 			cd $PREFIX/share
-			wget https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.zip
-			unzip phpMyAdmin-5.1.2-all-languages.zip
+			wget https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.zip 2> /dev/null
+			unzip phpMyAdmin-5.1.2-all-languages.zip 2> /dev/null
 			clear
-			mv phpMyAdmin-5.1.2-all-languages phpmyadmin 
+			mv phpMyAdmin-5.1.2-all-languages phpmyadmin 2> /dev/null
 			ln -s $PREFIX/etc/phpmyadmin/config.inc.php $PREFIX/share/phpmyadmin &> /dev/null
 			rm phpMyAdmin-5.1.2-all-languages.zip &> /dev/null
 			echo ""
@@ -46,12 +45,12 @@ phpMyAdmin()
 		echo ""
 		echo -e "\e[1;34m[\e[\e[1;92m~\e[1;34m]\e[1;92Downloading phpMyAdmin-5.1.2-all-languages\e[0m"
 		cd $PREFIX/share
-		wget https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.zip
-		unzip phpMyAdmin-5.1.2-all-languages.zip
+		wget https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.zip 2> /dev/null
+		unzip phpMyAdmin-5.1.2-all-languages.zip 2> /dev/null
 		clear
-		mv phpMyAdmin-5.1.2-all-languages phpmyadmin 
+		mv phpMyAdmin-5.1.2-all-languages phpmyadmin 2> /dev/null
 		ln -s $PREFIX/etc/phpmyadmin/config.inc.php $PREFIX/share/phpmyadmin &> /dev/null
-		rm phpMyAdmin-5.1.2-all-languages.zip
+		rm phpMyAdmin-5.1.2-all-languages.zip 2> /dev/null
 		echo ""
 		echo -e "\e[1;34m[\e[1;32m Done \e[1;34m]\e[0m"
 		echo ""
