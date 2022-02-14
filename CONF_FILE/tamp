@@ -9,8 +9,7 @@ case ${option} in
 	   	echo "Starting MySQL/Apache2...."
 		httpd &> /dev/null
 		mysqld --skip-grant-tables --general-log &> /dev/null
-		printf "   \b\b\b\b\b"
-		printf "\e[1;34m[\e[1;32m Done \e[1;34m]\e[0m";
+		printf "\nSQL is stopped!\n";
 		echo "";
 	   fi
       ;; 
@@ -20,8 +19,7 @@ case ${option} in
 	   killall mysqld &> /dev/null
 	   killall /data/data/com.termux/files/usr/bin/mariadbd &> /dev/null
 	   killall mysqld_safe &> /dev/null
-	   printf "   \b\b\b\b\b"
-	   printf "\e[1;34m[\e[1;32m Done \e[1;34m]\e[0m";
+	   printf "\nSQL is stopped!\n";
 	   echo "";
 
       ;;
