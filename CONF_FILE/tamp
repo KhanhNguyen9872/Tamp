@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if [ -f ~/../usr/var/lib/serverkhanh ] 2> /dev/null; then
+    clear
+    printf "${light_cyan}\n\n Github: https://github.com/khanhnguyen9872\n Facebook: https://fb.me/khanh10a1\n\n"
+    printf "${red}\n\nServer Ninja Termux cua Khanh da tat!\n\n Ban khong the truy cap vao tinh nang nay!\n Vui long ket noi Internet de kiem tra Server\n\n${reset}"
+    exit 0
+fi
+
 option="${1}" 
 case ${option} in 
    -start) 
